@@ -1,7 +1,9 @@
 import { gql, useMutation } from '@apollo/client';
 import { FormEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Footer } from '../components/Footer';
 import { Logo } from '../components/Logo';
+import { ReactIcon } from '../components/ReactIcon';
 
 const CREATE_SUBSCRIBE_MUTATION = gql`
   mutation CreateSubscriber($name: String!, $email: String!) {
@@ -35,8 +37,12 @@ export function Subscribe() {
   }
 
   return (
-    <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
-      <div className="w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto">
+    <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center relative">
+      <div className="absolute top-1 left-1/2 transform -translate-x-1/2 -z-0">
+        <ReactIcon />
+      </div>
+
+      <div className="w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto z-10">
         <div className="max-w-[640px]">
           <Logo />
 
@@ -62,15 +68,17 @@ export function Subscribe() {
             onSubmit={handleSubscribe}
           >
             <input
-              className="bg-gray-900 rounded px-5 h-14"
+              className="bg-gray-900 rounded px-5 h-14 hover:outline-none focus:outline-none hover:outline-green-300 focus:outline-green-300 invalid:outline-red-500 focus:invalid:outline-red-500"
               type="text"
               placeholder="Seu nome completo"
+              required
               onChange={(event) => setName(event.target.value)}
             />
             <input
-              className="bg-gray-900 rounded px-5 h-14"
+              className="bg-gray-900 rounded px-5 h-14 hover:outline-none focus:outline-none hover:outline-green-300 focus:outline-green-300 invalid:outline-red-500 focus:invalid:outline-red-500"
               type="email"
               placeholder="Digite seu e-mail"
+              required
               onChange={(event) => setEmail(event.target.value)}
             />
 
@@ -85,6 +93,8 @@ export function Subscribe() {
         </div>
       </div>
       <img src="/src/assets/code-mockup.png" className="mt-10" alt="" />
+
+      <Footer page="subscribe" />
     </div>
   );
 }
