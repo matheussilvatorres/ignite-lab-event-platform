@@ -52,14 +52,3 @@ The following tools have been used to build this project:
 - [Apollo GraphQL](https://www.apollographql.com/)
 - [GraphCMS](https://www.apollographql.com/)
 
-### Author
-
----
-
-<img style="border-radius: 50%;" src="https://github.com/augustomarcelo.png" width="100px;" alt=""/>
-<br />
-<b>Marcelo Augusto</b>
-
-[![Twitter Badge](https://img.shields.io/badge/-@mrclgst-1ca0f1?style=for-the-badge&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/mrclgst)](https://twitter.com/mrclgst)
-[![Linkedin Badge](https://img.shields.io/badge/-marcelo-blue?style=for-the-badge&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/augustomarcelo/)](https://www.linkedin.com/in/augustomarcelo/)
-[![Gmail Badge](https://img.shields.io/badge/-mrclgst10@gmail.com-c14438?style=for-the-badge&logo=Gmail&logoColor=white&link=mailto:mrclgst10@gmail.com)](mailto:mrclgst10@gmail.com)
